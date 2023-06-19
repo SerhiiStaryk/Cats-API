@@ -1,0 +1,9 @@
+  <mat-form-field class="full-width">
+    <mat-label>Breed</mat-label>
+    <mat-select [formControl]="breedControl">
+      <mat-option>None</mat-option>
+      <mat-option *ngFor="let breed of breeds$ | async" [value]="breed.id">{{
+        breed.name
+      }}</mat-option>
+    </mat-select>
+  </mat-form-field>

@@ -1,0 +1,22 @@
+<ul class="navbar">
+  <li class="navbar-item">
+    <a
+      [routerLink]="['/']"
+      [routerLinkActiveOptions]="{ exact: true }"
+      routerLinkActive="active"
+      class="navbar-link"
+    >
+      Home
+    </a>
+  </li>
+
+    <li class="navbar-item">
+    <a
+      [routerLink]="['/favorite-cats']"
+      routerLinkActive="active"
+      class="navbar-link"
+    >
+      Favorite
+    </a>
+  </li>
+</ul>

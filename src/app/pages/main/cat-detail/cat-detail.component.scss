@@ -1,0 +1,33 @@
+@use "../../../../styles//constants//breakpoints";
+
+.wrapper {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 60px;
+  gap: 40px;
+
+  img {
+    width: 50%;
+    box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  .description {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: breakpoints.$small) {
+  .wrapper {
+    width: 95%;
+    flex-direction: column;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .description {
+    width: 100%;
+  }
+}

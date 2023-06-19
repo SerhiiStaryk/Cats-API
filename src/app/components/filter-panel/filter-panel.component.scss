@@ -1,0 +1,32 @@
+@use "../../../styles/constants/breakpoints";
+
+.filter-panel {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.left-side {
+  width: 50%;
+}
+
+.rigth-side {
+  width: 50%;
+}
+
+@media screen and (max-width: breakpoints.$small) {
+  .filter-panel {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .left-side {
+    width: 100%;
+  }
+
+  .rigth-side {
+    width: 100%;
+  }
+}

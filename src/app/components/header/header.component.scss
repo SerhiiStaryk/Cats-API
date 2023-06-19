@@ -1,0 +1,65 @@
+@use "../../../styles/constants/breakpoints";
+
+.header {
+  height: 60px;
+  padding: 0 60px;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+
+
+  &-logo {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    margin-right: 60px;
+    color: #fff;
+    text-decoration: none;
+
+    &__img {
+      height: auto;
+      width: 60px;
+      filter: brightness(0) invert(1);
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+
+    h2 {
+      line-height: 1;
+      margin: 0;
+    }
+  }
+
+  &-menu {
+    display: flex;
+    height: 100%;
+  }
+
+  .burger-menu {
+    height: inherit;
+    min-width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &.active {
+      background-color: transparent;
+    }
+  }
+}
+
+@media screen and (max-width: breakpoints.$small) {
+  .header {
+    padding-left: 0;
+    padding-right: 20px;
+
+    &-logo {
+      margin-right: 20px;
+    }
+  }
+}

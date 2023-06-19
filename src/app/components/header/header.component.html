@@ -1,0 +1,28 @@
+<header>
+  <mat-toolbar color="primary" class="header">
+    <div
+      *ngIf="isShowBurgerMenu"
+      [class.active]="isOpen"
+      (click)="onOpenMenu()"
+      class="burger-menu"
+    >
+      <mat-icon *ngIf="isOpen; else burgerIcon">close</mat-icon>
+      <ng-template #burgerIcon>
+        <mat-icon>menu</mat-icon>
+      </ng-template>
+    </div>
+
+    <a [routerLink]="['/']" class="header-logo">
+      <img
+        src="../../../../assets/logo.svg"
+        alt="logo"
+        class="header-logo__img"
+      />
+      <h2 class="header-logo__title">CATS CLUB</h2>
+    </a>
+
+    <div *ngIf="!isShowBurgerMenu" class="header-menu">
+      <app-menu></app-menu>
+    </div>
+  </mat-toolbar>
+</header>

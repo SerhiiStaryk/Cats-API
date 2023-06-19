@@ -1,0 +1,12 @@
+<div class="wrapper" *ngIf="cat$ | async as cat">
+  <img [src]="cat.url" [alt]="cat.id" />
+  <div class="description" *ngIf="cat.breeds![0] as breeds">
+    <h2>{{breeds.name}}</h2>
+    <h4>{{breeds.alt_names}}</h4>
+    <h5><strong>Country:</strong> {{breeds.origin}}</h5>
+    <p>{{breeds.description}}</p>
+    <p><strong>Life span: </strong>{{breeds.life_span}} years</p>
+    <p><strong>Temperament: </strong>{{breeds.temperament}}</p>
+    <a mat-raised-button [href]="breeds.wikipedia_url" target="_blank">GO TO WIKIPEDIA</a>
+  </div>
+</div>

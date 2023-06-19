@@ -1,0 +1,6 @@
+<div class="container">
+  <app-filter-panel></app-filter-panel>
+  <div class="card-wrapper">
+    <app-card *ngFor="let cat of cats$ | async" [cat]="cat"></app-card>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<mat-card class="card">
+  <img mat-card-image [src]="cat.url" [alt]="cat.id" />
+  <mat-card-actions class="card-action">
+    <div>
+      <button mat-button (click)="setIsShare()">SHARE</button>
+      <share-buttons *ngIf="isShare"
+        theme="modern-dark"
+        [include]="[
+          'facebook',
+          'messenger',
+          'linkedin',
+          'pinterest',
+          'telegram',
+          'twitter',
+          'viber',
+        ]"
+        [showIcon]="true"
+        [showText]="true"
+        url="https://github.com/SerhiiStaryk"
+        description="CATS API"
+        twitterAccount="SerhiiStaryk"
+      >
+      </share-buttons>
+    </div>
+    <div *ngIf="filter$ | async as filter">
+      <a mat-button [routerLink]="cat.id" *ngIf="filter.breed">MORE</a>
+    </div>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,9 @@
+<h2>Filtered Cats</h2>
+<form class="filter-panel">
+  <div class="left-side">
+    <app-search-input (breedIdEvent)="setBreed($event)"></app-search-input>
+  </div>
+  <div class="rigth-side">
+    <app-slider (countEvent)="setCount($event)"></app-slider>
+  </div>
+</form>

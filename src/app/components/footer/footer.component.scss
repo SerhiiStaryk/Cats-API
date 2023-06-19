@@ -1,0 +1,53 @@
+@use '../../../styles//constants/breakpoints';
+
+.footer {
+  box-sizing: border-box;
+  height: 60px;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  background: #21232e;
+  color: #fff;
+
+  &-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 18px;
+
+
+    &__img{
+    height: auto;
+    width: 50px;
+    filter: brightness(0) invert(1);
+    }
+  }
+
+  .build-version {
+    margin-left: auto;
+  }
+
+  p {
+    margin: 0;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (max-width: breakpoints.$small) {
+  .footer {
+    padding: 0;
+    flex-direction: column-reverse;
+    justify-content: center;
+
+    &-logo {
+      display: none;
+    }
+
+    .build-version {
+      margin-left: 0;
+    }
+  }
+
+  p {
+    font-size: 12px;
+  }
+}

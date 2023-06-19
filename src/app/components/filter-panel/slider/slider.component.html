@@ -1,0 +1,14 @@
+<h3>Shows {{ sliderControl.value }} cat(s)</h3>
+<div class="slider-wrapper">
+  <label class="label">{{ settings.min }}</label>
+  <mat-slider
+    class="slider"
+    [max]="settings.max"
+    [min]="settings.min"
+    [step]="settings.step"
+    [discrete]="settings.thumbLabel"
+  >
+    <input matSliderThumb [formControl]="sliderControl" />
+  </mat-slider>
+  <label class="label">{{ settings.max }}</label>
+</div>

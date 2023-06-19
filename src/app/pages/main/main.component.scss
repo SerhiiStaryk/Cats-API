@@ -1,0 +1,42 @@
+@use "../../../styles/constants/breakpoints";
+
+.container {
+  padding-top: 60px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  gap: 40px;
+}
+
+@media screen and (max-width: breakpoints.$large) {
+  .container {
+    width: 80%;
+  }
+
+  .card-wrapper {
+    justify-content: center;
+  }
+}
+
+
+
+@media screen and (max-width: breakpoints.$small) {
+  .container {
+    width: 95%;
+  }
+
+  .card-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+}
+
+
